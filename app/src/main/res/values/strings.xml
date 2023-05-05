@@ -1,0 +1,888 @@
+<resources>
+    <string name="app_name">Swifty</string>
+
+    <string name="sf_1">
+        <p>
+            Swift is a new programming language for iOS, OS X, watchOS, and tvOS apps that builds on the best of C and Objective-C, without the constraints of C compatibility. Swift adopts safe programming patterns and adds modern features to make programming easier, more flexible, and more fun. Swift’s clean slate, backed by the mature and much-loved Cocoa and Cocoa Touch frameworks, is an opportunity to reimagine how software development works.
+        </p>
+        \n
+        \n
+        <p>
+            Swift has been years in the making. Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure. We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout.
+        </p>
+        \n
+        \n
+        <p>
+            Swift feels familiar to Objective-C developers. It adopts the readability of Objective-C’s named parameters and the power of Objective-C’s dynamic object model. It provides seamless access to existing Cocoa frameworks and mix-and-match interoperability with Objective-C code. Building from this common ground, Swift introduces many new features and unifies the procedural and object-oriented portions of the language.
+        </p>
+        \n
+        \n
+        <p>
+            Swift combines the best in modern language thinking with wisdom from the wider Apple engineering culture. The compiler is optimized for performance, and the language is optimized for development, without compromising on either. It’s designed to scale from “hello, world” to an entire operating system. All this makes Swift a sound future investment for developers and for Apple.
+        </p>
+    </string>
+
+    <string name="sf_2">
+        <p>
+            Tradition suggests that the first program in a new language should print the words “Hello, world!” on the screen. In Swift, this can be done in a single line :
+        </p>
+        \n
+        \n
+        <p>
+            print("Hello, world!")
+        </p>
+        \n
+        \n
+        <p>
+            If you have written code in C or Objective-C, this syntax looks familiar to you—in Swift, this line of code is a complete program. You don’t need to import a separate library for functionality like input/output or string handling. Code written at global scope is used as the entry point for the program, so you don’t need a main() function. You also don’t need to write semicolons at the end of every statement.
+        </p>
+    </string>
+
+    <string name="sf_3">
+        <p>
+            Constants and variables must be declared before they are used. You declare constants with the let keyword and variables with the var keyword.
+        </p>
+        \n
+        \n
+        <p>
+            Example of how constants and variables can be used to track the number of login attempts a user has made :
+        </p>
+        \n
+        \n
+        <p>
+            let maximumNumberOfLoginAttempts = 10\n
+            var currentLoginAttempt = 0
+        </p>
+        \n
+        \n
+        <p>
+            You can declare multiple constants or multiple variables on a single line, separated by commas.
+        </p>
+        \n
+        \n
+        <p>
+            Example:
+        </p>
+        \n
+        \n
+        <p>
+            var x = 0.0, y = 0.0, z = 0.0
+        </p>
+        \n
+        \n
+        <p>
+            You can provide a type annotation when you declare a constant or variable, to be clear about the kind of values the constant or variable can store. Write a type annotation by placing a colon after the constant or variable name, followed by a space, followed by the name of the type to use.
+        </p>
+        \n
+        \n
+        <p>
+            This example provides a type annotation for a variable called welcomeMessage, to indicate that the variable can store String values :
+        </p>
+        \n
+        \n
+        <p>
+            var welcomeMessage: String
+        </p>
+        \n
+        \n
+        <p>
+            Constant and variable names cannot contain whitespace characters, mathematical symbols, arrows, private-use (or invalid) Unicode code points, or line- and box-drawing characters. Nor can they begin with a number, although numbers may be included elsewhere within the name.
+        </p>
+    </string>
+
+    <string name="sf_4">
+        <p>
+            Swift supports most standard C operators and improves several capabilities to eliminate common coding errors. The assignment operator (=) does not return a value, to prevent it from being mistakenly used when the equal to operator (==) is intended. Arithmetic operators (+, -, *, /, % and so forth) detect and disallow value overflow, to avoid unexpected results when working with numbers that become larger or smaller than the allowed value range of the type that stores them. You can opt in to value overflow behavior by using Swift’s overflow operators.
+        </p>
+        \n
+        \n
+        <p>
+            The assignment operator (a = b) initializes or updates the value of a with the value of b :
+        </p>
+        \n
+        \n
+        <p>
+            let b = 10\n
+            var a = 5\n
+            a = b\n
+            // a is now equal to 10
+        </p>
+        \n
+        \n
+        <p>
+            If the right side of the assignment is a tuple with multiple values, its elements can be decomposed into multiple constants or variables at once :
+        </p>
+        \n
+        \n
+        <p>
+            let (x, y) = (1, 2)\n
+            // x is equal to 1, and y is equal to 2
+        </p>
+        \n
+        \n
+        <p>
+            This feature prevents the assignment operator (=) from being used by accident when the equal to operator (==) is actually intended. By making if x = y invalid, Swift helps you to avoid these kinds of errors in your code.
+        </p>
+        \n
+        <p>
+            Swift supports the four standard arithmetic operators for all number types :
+        </p>
+        \n
+        \n
+        <p>
+            Addition (+)\n
+            Subtraction (-)\n
+            Multiplication (*)\n
+            Division (/)
+        </p>
+    </string>
+
+    <string name="sf_5">
+        <p>
+            Swift’s String and Character types provide a fast, Unicode-compliant way to work with text in your code. The syntax for string creation and manipulation is lightweight and readable, with a string literal syntax that is similar to C. String concatenation is as simple as combining two strings with the + operator, and string mutability is managed by choosing between a constant or a variable, just like any other value in Swift. You can also use strings to insert constants, variables, literals, and expressions into longer strings, in a process known as string interpolation. This makes it easy to create custom string values for display, storage, and printing.
+        </p>
+        \n
+        \n
+        <p>
+            You can include predefined String values within your code as string literals. A string literal is a fixed sequence of textual characters surrounded by a pair of double quotes ("").
+        </p>
+        \n
+        \n
+        <p>
+            Use a string literal as an initial value for a constant or variable :
+        </p>
+        \n
+        \n
+        <p>
+            let someString = "Some string literal value"
+        </p>
+        \n
+        \n
+        <p>
+            You indicate whether a particular String can be modified (or mutated) by assigning it to a variable (in which case it can be modified), or to a constant (in which case it cannot be modified) :
+        </p>
+        \n
+        \n
+        <p>
+            var variableString = "Horse"\n
+            variableString += " and carriage"\n
+            // variableString is now "Horse and carriage"\n
+            \n
+            let constantString = "Highlander"\n
+            constantString += " and another Highlander"\n
+            // this reports a compile-time error - a constant string cannot be modified
+        </p>
+    </string>
+
+    <string name="sf_6">
+        <p>
+            Swift provides three primary collection types, known as arrays, sets, and dictionaries, for storing collections of values. Arrays are ordered collections of values. Sets are unordered collections of unique values. Dictionaries are unordered collections of key-value associations.
+        </p>
+        \n
+        \n
+        <p>
+            Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store. This means that you cannot insert a value of the wrong type into a collection by mistake. It also means you can be confident about the type of values you will retrieve from a collection.
+        </p>
+        \n
+        \n
+        <p>
+            The type of a Swift array is written in full as Array Element  where Element is the type of values the array is allowed to store. You can also write the type of an array in shorthand form as [Element]. Although the two forms are functionally identical, the shorthand form is preferred and is used throughout this guide when referring to the type of an array.
+        </p>
+        \n
+        \n
+        <p>
+            Creating an Empty Array :
+        </p>
+        \n
+        \n
+        <p>
+            You can create an empty array of a certain type using initializer syntax :
+        </p>
+        \n
+        \n
+        <p>
+            var someInts = [Int]()\n
+            print("someInts is of type [Int] with \(someInts.count) items.")\n
+            // Prints "someInts is of type [Int] with 0 items."
+        </p>
+        \n
+        \n
+        <p>
+            Swift’s Array type also provides an initializer for creating an array of a certain size with all of its values set to the same default value. You pass this initializer the number of items to be added to the new array (called count) and a default value of the appropriate type (called repeatedValue)
+        </p>
+    </string>
+
+    <string name="sf_7">
+        <p>
+            Swift provides a variety of control flow statements. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code.
+        </p>
+        \n
+        \n
+        <p>
+            Swift also provides a for-in loop that makes it easy to iterate over arrays, dictionaries, ranges, strings, and other sequences.
+        </p>
+        \n
+        \n
+        <p>
+            Swift’s switch statement is also considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements. Cases can match many different patterns, including interval matches, tuples, and casts to a specific type. Matched values in a switch case can be bound to temporary constants or variables for use within the case’s body, and complex matching conditions can be expressed with a where clause for each case.
+        </p>
+        \n
+        \n
+        <p>
+            You use the for-in loop to iterate over a sequence, such as ranges of numbers, items in an array, or characters in a string.
+        </p>
+        \n
+        \n
+        <p>
+            This example prints the first few entries in the five-times table :
+        </p>
+        \n
+        \n
+        <p>
+            for index in 1...5\n
+            {\n
+            print("\(index) times 5 is \(index * 5)")\n
+            }\n
+            // 1 times 5 is 5\n
+            // 2 times 5 is 10\n
+            // 3 times 5 is 15\n
+            // 4 times 5 is 20\n
+            // 5 times 5 is 25
+        </p>
+    </string>
+
+    <string name="sf_8">
+        <p>
+            When you define a function, you can optionally define one or more named, typed values that the function takes as input, known as parameters. You can also optionally define a type of value that the function will pass back as output when it is done, known as its return type.
+        </p>
+        \n
+        \n
+        <p>
+            Every function has a function name, which describes the task that the function performs. To use a function, you “call” that function with its name and pass it input values (known as arguments) that match the types of the function’s parameters. A function’s arguments must always be provided in the same order as the function’s parameter list.
+        </p>
+        \n
+        \n
+        <p>
+            The function in the example below is called sayHello(_:), because that’s what it does—it takes a person’s name as input and returns a greeting for that person. To accomplish this, you define one input parameter—a String value called personName—and a return type of String, which will contain a greeting for that person :
+        </p>
+        \n
+        \n
+        <p>
+            func sayHello(personName: String) -> String\n
+            {\n
+            let greeting = "Hello, " + personName + "!"\n
+            return greeting\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            All of this information is rolled up into the function’s definition, which is prefixed with the func keyword. You indicate the function’s return type with the return arrow -> (a hyphen followed by a right angle bracket), which is followed by the name of the type to return.
+        </p>
+    </string>
+
+    <string name="sf_9">
+        <p>
+            Closure expressions are a way to write inline closures in a brief, focused syntax. Closure expressions provide several syntax optimizations for writing closures in a shortened form without loss of clarity or intent. The closure expression examples below illustrate these optimizations by refining a single example of the sort(_:) method over several iterations, each of which expresses the same functionality in a more succinct way.
+        </p>
+        \n
+        \n
+        <p>
+            The Sort Method :
+        </p>
+        \n
+        \n
+        <p>
+            Swift’s standard library provides a method called sort(:), which sorts an array of values of a known type, based on the output of a sorting closure that you provide. Once it completes the sorting process, the sort(_:) method returns a new array of the same type and size as the old one, with its elements in the correct sorted order. The original array is not modified by the sort(_:) method.
+        </p>
+        \n
+        \n
+        <p>
+            The closure expression examples below use the sort(_:) method to sort an array of String values in reverse alphabetical order. Here’s the initial array to be sorted :
+        </p>
+        \n
+        \n
+        <p>
+            let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+        </p>
+        \n
+        \n
+        <p>
+            The sort(_:) method accepts a closure that takes two arguments of the same type as the array’s contents, and returns a Bool value to say whether the first value should appear before or after the second value once the values are sorted. The sorting closure needs to return true if the first value should appear before the second value, and false otherwise.
+        </p>
+    </string>
+
+    <string name="sf_10">
+        <p>
+            Enumerations in Swift are first-class types in their own right. They adopt many features traditionally supported only by classes, such as computed properties to provide additional information about the enumeration’s current value, and instance methods to provide functionality related to the values the enumeration represents. Enumerations can also define initializers to provide an initial case value; can be extended to expand their functionality beyond their original implementation; and can conform to protocols to provide standard functionality.
+        </p>
+        \n
+        \n
+        <p>
+            You introduce enumerations with the enum keyword and place their entire definition within a pair of braces :
+        </p>
+        \n
+        \n
+        <p>
+            enum SomeEnumeration\n
+            {\n
+            // enumeration definition goes here\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            Here’s an example for the four main points of a compass :
+        </p>
+        \n
+        \n
+        <p>
+            enum CompassPoint\n
+            {\n
+            case North\n
+            case South\n
+            case East\n
+            case West\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            The values defined in an enumeration (such as North, South, East, and West) are its enumeration cases. You use the case keyword to introduce new enumeration cases.
+        </p>
+    </string>
+
+    <string name="sf_11">
+        <p>
+            Classes and structures are general-purpose, flexible constructs that become the building blocks of your program’s code. You define properties and methods to add functionality to your classes and structures by using exactly the same syntax as for constants, variables, and functions.
+        </p>
+        \n
+        \n
+        <p>
+            Unlike other programming languages, Swift does not require you to create separate interface and implementation files for custom classes and structures. In Swift, you define a class or a structure in a single file, and the external interface to that class or structure is automatically made available for other code to use.
+        </p>
+        \n
+        \n
+        <p>
+            Classes and structures have a similar definition syntax. You introduce classes with the class keyword and structures with the struct keyword. Both place their entire definition within a pair of braces :
+        </p>
+        \n
+        \n
+        <p>
+            class SomeClass\n
+            {\n
+            // class definition goes here\n
+            }\n
+            struct SomeStructure\n
+            {\n
+            // structure definition goes here\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            All structures have an automatically-generated memberwise initializer, which you can use to initialize the member properties of new structure instances. Initial values for the properties of the new instance can be passed to the memberwise initializer by name :
+        </p>
+        \n
+        \n
+        <p>
+            let vga = Resolution(width: 640, height: 480)
+        </p>
+        \n
+        \n
+        <p>
+            Unlike structures, class instances do not receive a default memberwise initializer.
+        </p>
+    </string>
+
+    <string name="sf_12">
+        <p>
+            Properties associate values with a particular class, structure, or enumeration. Stored properties store constant and variable values as part of an instance, whereas computed properties calculate (rather than store) a value. Computed properties are provided by classes, structures, and enumerations. Stored properties are provided only by classes and structures.
+        </p>
+        \n
+        \n
+        <p>
+            Stored and computed properties are usually associated with instances of a particular type. However, properties can also be associated with the type itself. Such properties are known as type properties.
+        </p>
+        \n
+        \n
+        <p>
+            In its simplest form, a stored property is a constant or variable that is stored as part of an instance of a particular class or structure. Stored properties can be either variable stored properties (introduced by the var keyword) or constant stored properties (introduced by the let keyword).
+        </p>
+        \n
+        \n
+        <p>
+            If you create an instance of a structure and assign that instance to a constant, you cannot modify the instance’s properties, even if they were declared as variable properties :
+        </p>
+        \n
+        \n
+        <p>
+            let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)\n
+            // this range represents integer values 0, 1, 2, and 3\n
+            rangeOfFourItems.firstValue = 6\n
+            // this will report an error, even though firstValue is a variable property
+        </p>
+    </string>
+
+    <string name="sf_13">
+        <p>
+            Methods are functions that are associated with a particular type. Classes, structures, and enumerations can all define instance methods, which encapsulate specific tasks and functionality for working with an instance of a given type. Classes, structures, and enumerations can also define type methods, which are associated with the type itself. Type methods are similar to class methods in Objective-C.
+        </p>
+        \n
+        \n
+        <p>
+            Instance methods are functions that belong to instances of a particular class, structure, or enumeration. They support the functionality of those instances, either by providing ways to access and modify instance properties, or by providing functionality related to the instance’s purpose. Instance methods have exactly the same syntax as functions, as described in Functions.
+        </p>
+        \n
+        \n
+        <p>
+            Here’s an example that defines a simple Counter class, which can be used to count the number of times an action occurs :
+        </p>
+        \n
+        \n
+        <p>
+            class Counter\n
+            {\n
+            var count = 0\n
+            func increment()\n
+            {\n
+            count += 1\n
+            }\n
+            func incrementBy(amount: Int)\n
+            {\n
+            count += amount\n
+            }\n
+            func reset()\n
+            {\n
+            count = 0\n
+            }\n
+            }
+        </p>
+    </string>
+
+    <string name="sf_14">
+        <p>
+            Classes, structures, and enumerations can define subscripts, which are shortcuts for accessing the member elements of a collection,list, or sequence. You use subscripts to set and retrieve values by index without needing separate methods for setting and retrieval. For example, you access elements in an Array instance as someArray[index] and elements in a Dictionary instance as someDictionary[key].
+        </p>
+        \n
+        \n
+        <p>
+            You can define multiple subscripts for a single type, and the appropriate subscript overload to use is selected based on the type of index value you pass to the subscript. Subscripts are not limited to a single dimension, and you can define subscripts with multiple input parameters to suit your custom type’s needs.
+        </p>
+        \n
+        \n
+        <p>
+            Subscripts enable you to query instances of a type by writing one or more values in square brackets after the instance name. Their syntax is similar to both instance method syntax and computed property syntax. You write subscript definitions with the subscript keyword, and specify one or more input parameters and a return type, in the same way as instance methods. Unlike instance methods, subscripts can be read-write or read-only. This behavior is communicated by a getter and setter in the same way as for computed properties :
+        </p>
+        \n
+        \n
+        <p>
+            subscript(index: Int) -> Int\n
+            {\n
+            Get\n
+            {\n
+            // return an appropriate subscript value here\n
+            }\n
+            set(newValue)\n
+            {\n
+            // perform a suitable setting action here\n
+            }\n
+            }
+        </p>
+    </string>
+
+    <string name="sf_15">
+        <p>
+            Classes in Swift can call and access methods, properties, and subscripts belonging to their superclass and can provide their own overriding versions of those methods, properties, and subscripts to refine or modify their behavior. Swift helps to ensure your overrides are correct by checking that the override definition has a matching superclass definition.
+        </p>
+        \n
+        \n
+        <p>
+            Classes can also add property observers to inherited properties in order to be notified when the value of a property changes. Property observers can be added to any property, regardless of whether it was originally defined as a stored or computed property.
+        </p>
+        \n
+        \n
+        <p>
+            Subclassing is the act of basing a new class on an existing class. The subclass inherits characteristics from the existing class, which you can then refine. You can also add new characteristics to the subclass.
+        </p>
+        \n
+        \n
+        <p>
+            To indicate that a subclass has a superclass, write the subclass name before the superclass name, separated by a colon :
+        </p>
+        \n
+        \n
+        <p>
+            class SomeSubclass: SomeSuperclass\n
+            {\n
+            // subclass definition goes here\n
+            }
+            \n
+        </p>
+        \n
+        <p>
+            The following example defines a subclass called Bicycle, with a superclass of Vehicle :
+        </p>
+        \n
+        \n
+        <p>
+            class Bicycle: Vehicle\n
+            {\n
+            var hasBasket = false\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            The new Bicycle class automatically gains all of the characteristics of Vehicle, such as its currentSpeed and description properties and its makeNoise() method.\n
+        </p>
+    </string>
+
+    <string name="sf_16">
+        <p>
+            Initializers are called to create a new instance of a particular type. In its simplest form, an initializer is like an instance method with no parameters, written using the init keyword :
+        </p>
+        \n
+        \n
+        <p>
+            init()\n
+            {\n
+            // perform some initialization here\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            The example below defines a new structure called Fahrenheit to store temperatures expressed in the Fahrenheit scale. The Fahrenheit structure has one stored property, temperature, which is of type Double :
+        </p>
+        \n
+        \n
+        <p>
+            struct Fahrenheit\n
+            {\n
+            var temperature: Double\n
+            init()\n
+            {\n
+            temperature = 32.0\n
+            }\n
+            }\n
+            var f = Fahrenheit()\n
+            print("The default temperature is \(f.temperature)° Fahrenheit")\n
+            // Prints "The default temperature is 32.0° Fahrenheit"
+        </p>
+        \n
+        \n
+        <p>
+            The structure defines a single initializer, init, with no parameters, which initializes the stored temperature with a value of 32.0 (the freezing point of water in degrees Fahrenheit).
+        </p>
+    </string>
+
+    <string name="sf_17">
+        <p>
+            In addition to the operators described in Basic Operators, Swift provides several advanced operators that perform more complex value manipulation. These include all of the bitwise and bit shifting operators you will be familiar with from C and Objective-C.
+        </p>
+        \n
+        \n
+        <p>
+            Unlike arithmetic operators in C, arithmetic operators in Swift do not overflow by default. Overflow behavior is trapped and reported as an error. To opt in to overflow behavior, use Swift’s second set of arithmetic operators that overflow by default, such as the overflow addition operator (&amp;+). All of these overflow operators begin with an ampersand (&amp;).
+        </p>
+        \n
+        \n
+        <p>
+            When you define your own structures, classes, and enumerations, it can be useful to provide your own implementations of the standard Swift operators for these custom types. Swift makes it easy to provide tailored implementations of these operators and to determine exactly what their behavior should be for each type you create.
+        </p>
+        \n
+        \n
+        <p>
+            You’re not limited to the predefined operators. Swift gives you the freedom to define your own custom infix, prefix, postfix, and assignment operators, with custom precedence and associativity values. These operators can be used and adopted in your code like any of the predefined operators, and you can even extend existing types to support the custom operators you define.
+        </p>
+        \n
+        \n
+        <p>
+            Bitwise operators enable you to manipulate the individual raw data bits within a data structure. They are often used in low-level programming, such as graphics programming and device driver creation. Bitwise operators can also be useful when you work with raw data from external sources, such as encoding and decoding data for communication over a custom protocol.
+        </p>
+    </string>
+
+    <string name="sf_18">
+        <p>
+            Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil.
+        </p>
+        \n
+        \n
+        <p>
+            You specify optional chaining by placing a question mark (?) after the optional value on which you wish to call a property, method or subscript if the optional is non-nil. This is very similar to placing an exclamation mark (!) after an optional value to force the unwrapping of its value. The main difference is that optional chaining fails gracefully when the optional is nil, whereas forced unwrapping triggers a runtime error when the optional is nil.
+        </p>
+        \n
+        \n
+        <p>
+            Use the classes defined above to create a new Person instance, and try to access its numberOfRooms property as before :
+        </p>
+        \n
+        \n
+        <p>
+            let john = Person()\n
+            if let roomCount = john.residence?.numberOfRooms\n
+            {\n
+            print("John's residence has \(roomCount) room(s).")\n
+            }\n
+            else\n
+            {\n
+            print("Unable to retrieve the number of rooms.")\n
+            }\n
+            // Prints "Unable to retrieve the number of rooms."
+        </p>
+    </string>
+
+    <string name="sf_19">
+        <p>
+            Error handling is the process of responding to and recovering from error conditions in your program. Swift provides first-class support for throwing, catching, propagating, and manipulating recoverable errors at runtime.
+        </p>
+        \n
+        \n
+        <p>
+            Some operations aren’t guaranteed to always complete execution or produce a useful output. Optionals are used to represent the absence of a value, but when an operation fails, it’s often useful to understand what caused the failure, so that your code can respond accordingly.
+        </p>
+        \n
+        \n
+        <p>
+            As an example, consider the task of reading and processing data from a file on disk. There are a number of ways this task can fail, including the file not existing at the specified path, the file not having read permissions, or the file not being encoded in a compatible format. Distinguishing among these different situations allows a program to resolve some errors and to communicate to the user any errors it can’t resolve.
+        </p>
+        \n
+        \n
+        <p>
+            Swift enumerations are particularly well suited to modeling a group of related error conditions, with associated values allowing for additional information about the nature of an error to be communicated. For example, here’s how you might represent the error conditions of operating a vending machine inside a game :
+        </p>
+        \n
+        \n
+        <p>
+            enum VendingMachineError: ErrorType\n
+            {\n
+            case InvalidSelection\n
+            case InsufficientFunds(coinsNeeded: Int)\n
+            case OutOfStock\n
+            }
+        </p>
+    </string>
+
+    <string name="sf_20">
+        <p>
+            Type casting is a way to check the type of an instance, or to treat that instance as a different superclass or subclass from somewhere else in its own class hierarchy.
+        </p>
+        \n
+        \n
+        <p>
+            Type casting in Swift is implemented with the is and as operators. These two operators provide a simple and expressive way to check the type of a value or cast a value to a different type.
+        </p>
+        \n
+        \n
+        <p>
+            You can also use type casting to check whether a type conforms to a protocol.
+        </p>
+        \n
+        \n
+        <p>
+            You can use type casting with a hierarchy of classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy. The three code snippets below define a hierarchy of classes and an array containing instances of those classes, for use in an example of type casting.
+        </p>
+        \n
+        \n
+        <p>
+            The first snippet defines a new base class called MediaItem. This class provides basic functionality for any kind of item that appears in a digital media library. Specifically, it declares a name property of type String, and an init name initializer. (It is assumed that all media items, including all movies and songs, will have a name.)
+        </p>
+        \n
+        \n
+        <p>
+            class MediaItem\n
+            {\n
+            var name: String\n
+            init(name: String)\n
+            {\n
+            self.name = name\n
+            }\n
+            }
+        </p>
+    </string>
+
+    <string name="sf_21">
+        <p>
+            Enumerations are often created to support a specific class or structure’s functionality. Similarly, it can be convenient to define utility classes and structures purely for use within the context of a more complex type. To accomplish this, Swift enables you to define nested types, whereby you nest supporting enumerations, classes, and structures within the definition of the type they support.
+        </p>
+        \n
+        \n
+        <p>
+            To nest a type within another type, write its definition within the outer braces of the type it supports. Types can be nested to as many levels as are required.
+        </p>
+    </string>
+
+    <string name="sf_22">
+        <p>
+            Extensions add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling). Extensions are similar to categories in Objective-C. (Unlike Objective-C categories, Swift extensions do not have names.)
+        </p>
+        \n
+        \n
+        <p>
+            Extensions in Swift can :
+        </p>
+        \n
+        \n
+        <p>
+            Add computed instance properties and computed type properties\n
+            Define instance methods and type methods\n
+            Provide new initializers\n
+            Define subscripts\n
+            Define and use new nested types\n
+            Make an existing type conform to a protocol
+        </p>
+        \n
+        \n
+        <p>
+            In Swift, you can even extend a protocol to provide implementations of its requirements or add additional functionality that conforming types can take advantage of.
+        </p>
+        \n
+        \n
+        <p>
+            Declare extensions with the extension keyword :
+        </p>
+        \n
+        \n
+        <p>
+            extension SomeType\n
+            {\n
+            // new functionality to add to SomeType goes here\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            An extension can extend an existing type to make it adopt one or more protocols. Where this is the case, the protocol names are written in exactly the same way as for a class or structure :
+        </p>
+        \n
+        \n
+        <p>
+            extension SomeType: SomeProtocol, AnotherProtocol\n
+            {\n
+            // implementation of protocol requirements goes here\n
+            }
+        </p>
+    </string>
+
+    <string name="sf_23">
+        <p>
+            A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of those requirements. Any type that satisfies the requirements of a protocol is said to conform to that protocol.
+        </p>
+        \n
+        <p>
+            In addition to specifying requirements that conforming types must implement, you can extend a protocol to implement some of these requirements or to implement additional functionality that conforming types can take advantage of.
+        </p>
+        \n
+        <p>
+            You define protocols in a very similar way to classes, structures, and enumerations :
+        </p>
+        \n
+        \n
+        <p>
+            protocol SomeProtocol\n
+            {\n
+            // protocol definition goes here\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            Custom types state that they adopt a particular protocol by placing the protocol’s name after the type’s name, separated by a colon, as part of their definition. Multiple protocols can be listed, and are separated by commas :
+        </p>
+        \n
+        \n
+        <p>
+            struct SomeStructure: FirstProtocol, AnotherProtocol\n
+            {\n
+            // structure definition goes here\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            If a class has a superclass, list the superclass name before any protocols it adopts, followed by a comma :
+        </p>
+        \n
+        \n
+        <p>
+            class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol\n
+            {\n
+            // class definition goes here\n
+            }
+        </p>
+    </string>
+
+    <string name="sf_24">
+        <p>
+            Generic code enables you to write flexible, reusable functions and types that can work with any type, subject to requirements that you define. You can write code that avoids duplication and expresses its intent in a clear, abstracted manner.
+        </p>
+        \n
+        \n
+        <p>
+            Generics are one of the most powerful features of Swift, and much of the Swift standard library is built with generic code. In fact, you’ve been using generics throughout the Language Guide, even if you didn’t realize it. For example, Swift’s Array and Dictionary types are both generic collections. You can create an array that holds Int values, or an array that holds String values, or indeed an array for any other type that can be created in Swift. Similarly, you can create a dictionary to store values of any specified type, and there are no limitations on what that type can be.
+        </p>
+        \n
+        \n
+        <p>
+            Here’s a standard, non-generic function called swapTwoInts(_:_:), which swaps two Int values :
+        </p>
+        \n
+        \n
+        <p>
+            func swapTwoInts(inout a: Int, inout _ b: Int)\n
+            {\n
+            let temporaryA = a\n
+            a = b\n
+            b = temporaryA\n
+            }
+        </p>
+        \n
+        \n
+        <p>
+            The swapTwoInts(_:_:) function swaps the original value of b into a, and the original value of a into b. You can call this function to swap the values in two Int variables :
+        </p>
+        \n
+        \n
+        <p>
+            var someInt = 3\n
+            var anotherInt = 107\n
+            swapTwoInts(&amp;someInt, &amp;anotherInt)\n
+            print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")\n
+            // Prints "someInt is now 107, and anotherInt is now 3"
+        </p>
+    </string>
+
+    <string name="sf_25">
+        <p>
+            Access control restricts access to parts of your code from code in other source files and modules. This feature enables you to hide the implementation details of your code, and to specify a preferred interface through which that code can be accessed and used.
+        </p>
+        \n
+        \n
+        <p>
+            You can assign specific access levels to individual types (classes, structures, and enumerations), as well as to properties, methods, initializers, and subscripts belonging to those types. Protocols can be restricted to a certain context, as can global constants, variables, and functions.
+        </p>
+        \n
+        \n
+        <p>
+            In addition to offering various levels of access control, Swift reduces the need to specify explicit access control levels by providing default access levels for typical scenarios. Indeed, if you are writing a single-target app, you may not need to specify explicit access control levels at all.
+        </p>
+        \n
+        \n
+        <p>
+            Swift’s access control model is based on the concept of modules and source files.
+        </p>
+        \n
+        \n
+        <p>
+            A module is a single unit of code distribution—a framework or application that is built and shipped as a single unit and that can be imported by another module with Swift’s import keyword.
+        </p>
+        \n
+        \n
+        <p>
+            Each build target (such as an app bundle or framework) in Xcode is treated as a separate module in Swift. If you group together aspects of your app’s code as a stand-alone framework—perhaps to encapsulate and reuse that code across multiple applications—then everything you define within that framework will be part of a separate module when it is imported and used within an app, or when it is used within another framework.
+        </p>
+    </string>
+
+
+</resources>

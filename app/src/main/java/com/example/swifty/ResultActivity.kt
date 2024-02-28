@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+    
 class ResultActivity : AppCompatActivity() {
 
     lateinit var correctAns:TextView

@@ -62,5 +62,4 @@ class MyAdapter(private val newsList : ArrayList<Infos>) :
 
     }
 
-
 }

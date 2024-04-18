@@ -8,25 +8,34 @@
 
     <TextView
         android:id="@+id/heading"
-        android:elevation="16dp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:elevation="16dp"
         android:padding="16dp"
         android:text="Swift Introduction"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="26sp"
         android:textStyle="bold"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/infos"
-        android:layout_width="350dp"
+    <ScrollView
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heading" />
+        app:layout_constraintTop_toBottomOf="@+id/heading">
+
+        <TextView
+            android:id="@+id/infos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

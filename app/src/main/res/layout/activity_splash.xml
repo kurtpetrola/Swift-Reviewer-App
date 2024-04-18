@@ -24,10 +24,10 @@
         android:layout_gravity="center"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="SWIFTY"
+        android:text="Swifty"
         android:textColor="@color/white"
         android:textSize="40sp"
-        android:textStyle="italic" />
+        android:textStyle="bold" />
 
 
 </LinearLayout>

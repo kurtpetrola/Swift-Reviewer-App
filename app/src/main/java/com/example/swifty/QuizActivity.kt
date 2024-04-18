@@ -14,7 +14,6 @@ import kotlin.collections.ArrayList
 
 class QuizActivity : AppCompatActivity() {
 
-
     lateinit var questionsList:ArrayList<QuestionModel>
     private var index:Int = 0
     lateinit var questionModel: QuestionModel
@@ -29,11 +28,8 @@ class QuizActivity : AppCompatActivity() {
     lateinit var option3:Button
     lateinit var option4:Button
 
-
-    
     private var backPressedTime: Long = 0
     private var backToast: Toast? = null
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,8 +62,6 @@ class QuizActivity : AppCompatActivity() {
         setAllQuestions()
 
         countdown()
-
-
 
     }
 
@@ -103,13 +97,10 @@ class QuizActivity : AppCompatActivity() {
 
                 }
 
-
             }
 
 
-
         }.start()
-
 
 
     }
@@ -121,14 +112,12 @@ class QuizActivity : AppCompatActivity() {
         correctAnswerCount++
 
 
-
     }
     private fun wrongAns(option:Button){
 
         option.background=resources.getDrawable(R.drawable.wrong_bg)
 
         wrongAnswerCount++
-
 
     }
 
@@ -140,7 +129,6 @@ class QuizActivity : AppCompatActivity() {
 
         startActivity(intent)
     }
-
 
 
     private fun setAllQuestions() {

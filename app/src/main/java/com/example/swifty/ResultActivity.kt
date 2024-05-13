@@ -44,13 +44,14 @@ class ResultActivity : AppCompatActivity() {
                     performance.text="EXCELLENT"
                     output.background=resources.getDrawable(R.drawable.right_bg)
                 }
+
                 percentage<50 -> {
                     performance.text="POOR"
                     output.background=resources.getDrawable(R.drawable.wrong_bg)
                 }
             }
-
         }
+
     }
 
     override fun onBackPressed() {

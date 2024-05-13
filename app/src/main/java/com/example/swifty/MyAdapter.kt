@@ -42,8 +42,8 @@ class MyAdapter(private val newsList : ArrayList<Infos>) :
     override fun getItemCount(): Int {
 
         return newsList.size
-    }
 
+    }
 
     class MyViewHolder(itemView : View, listener : onItemClickListener) : RecyclerView.ViewHolder(itemView){
 

@@ -108,15 +108,12 @@ class QuizActivity : AppCompatActivity() {
 
     private fun correctAns(option: Button){
         option.background=getDrawable(R.drawable.right_bg)
-
         correctAnswerCount++
 
 
     }
     private fun wrongAns(option:Button){
-
         option.background=resources.getDrawable(R.drawable.wrong_bg)
-
         wrongAnswerCount++
 
     }
@@ -161,7 +158,6 @@ class QuizActivity : AppCompatActivity() {
         if(questionModel.option1==questionModel.answer){
             option1.background=resources.getDrawable(R.drawable.right_bg)
 
-
             correctAns(option1)
 
         }
@@ -175,7 +171,6 @@ class QuizActivity : AppCompatActivity() {
         if(questionModel.option2==questionModel.answer){
             option2.background=resources.getDrawable(R.drawable.right_bg)
 
-
             correctAns(option2)
 
         }
@@ -186,9 +181,7 @@ class QuizActivity : AppCompatActivity() {
     fun option3Clicked(view:View){
         disableButton()
         if(questionModel.option3==questionModel.answer){
-
             option3.background=resources.getDrawable(R.drawable.right_bg)
-
 
             correctAns(option3)
 
@@ -202,7 +195,6 @@ class QuizActivity : AppCompatActivity() {
         disableButton()
         if(questionModel.option4==questionModel.answer){
             option4.background=resources.getDrawable(R.drawable.right_bg)
-
 
             correctAns(option4)
 

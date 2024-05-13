@@ -24,16 +24,17 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:cardCornerRadius="25dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/lexenddeca_black"
                 android:textSize="60sp"
                 android:text="RESULT"
                 android:textStyle="bold"
                 android:layout_marginTop="25dp"
                 android:textColor="@color/black">
-
             </TextView>
 
             <LinearLayout
@@ -52,10 +53,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="10"
+                    android:fontFamily="@font/lexenddeca_regular"
                     android:textSize="75dp"
                     android:textColor="@color/black">
-
                 </TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -64,18 +66,17 @@
                     android:textStyle="bold"
                     android:padding="5dp"
                     android:textColor="@color/black">
-
                 </TextView>
+
                 <TextView
                     android:id="@+id/totalAns"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="10"
+                    android:fontFamily="@font/lexenddeca_regular"
                     android:textSize="75dp"
                     android:textColor="@color/black">
-
                 </TextView>
-
 
 
             </LinearLayout>
@@ -85,22 +86,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:textSize="45sp"
+                android:textSize="38sp"
+                android:fontFamily="@font/lexenddeca_regular"
                 android:text="PERFORMANCE"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="260dp"
                 android:textColor="@color/black">
-
             </TextView>
-
-
-
-
 
 
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

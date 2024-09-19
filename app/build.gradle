@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace 'com.example.swifty'
-    compileSdk 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId "com.example.swifty"
-        minSdk 30
+        minSdk 29
         //noinspection EditedTargetSdkVersion
         targetSdk 34
         versionCode 1
